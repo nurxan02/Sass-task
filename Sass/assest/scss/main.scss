@@ -1,0 +1,147 @@
+@import"../scss/mixins/mixins";
+*
+{
+    box-sizing: border-box;
+}
+
+#whatwedo
+{
+    .container
+    {
+        width: 2000px;
+        .row
+        {
+
+            display:flex;
+            justify-content: space-around;
+            align-content: space-around;
+            height: 100vh;
+            .whatwedoheader
+            {
+                display: flex;
+                justify-content: center;
+            }
+            .title
+            {
+                h2
+                {
+                    color: blue;
+                }
+
+            }
+            .readmore
+            {   
+                display: flex;
+                justify-content: end;
+                padding-right: 10px;
+                .readtext
+                {
+                    button
+                    {
+                       i{
+                        color: orange;
+                        transition: 0.3s; 
+                        transition-timing-function: linear;
+                    } 
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    background-color: linen;
+                    width: 170px;
+                    height: 50px;
+                    font-weight: bolder;
+                    border:gray solid 4px;
+                    border-radius: 10px;
+                    transition: 0.3s;
+
+
+                    }
+                    button:hover{
+                        border: orange solid 3px;
+                        box-shadow: 0px 0px 8px orangered;
+                    }
+                    button:hover i{
+                        transform: translate(8px);
+                    }
+                    a
+                    {
+                        color: rgb(24, 24, 24);
+                        text-decoration: none;
+                        
+
+                    }
+
+                }
+            }
+            .cardAI{
+                @include cards();
+                
+            }
+            .cardAI:hover{
+              transform: scale(1.05);
+    
+            }
+            .cardMicro{
+                @include cards();
+            }
+            .cardMicro:hover{
+                transform: scale(1.05);
+    
+            }
+            .cardBig{
+                @include cards();
+            }
+            .cardBig:hover{
+                transform: scale(1.05);
+    
+            }
+
+        }
+
+    }
+}
+#tech_power
+{
+    .background{
+        .colorplate{
+            background-color: rgba($color:rgb(59, 71, 197), $alpha: 0.8);
+            position: absolute;
+            right: 0px;
+            width: 50%;
+            height: 100vh;
+            z-index: 1;
+        }
+        position: relative;
+        z-index: 0;
+        background-image: url(https://www.simbrella.com/site/assets/files/1049/solutions_bg-1.jpg);
+        background-position:cover;
+        width: 100%;
+        height: 100vh;
+        background-attachment: fixed;
+        .container
+        {
+            .row
+            {
+                     display: flex;
+                    align-items: center;
+                    height: 100vh;
+                .techpowertitle
+                {
+                    font-size: 50px;
+                    color: white;
+                    font-weight: bold;
+                }
+                .techpowerdescribtion
+                {
+                    padding-left: 60px;
+                    color: white;
+                    font-size: 20px;
+                    z-index: 2;
+                    font-weight: bold;
+                    line-height: 3;
+                }
+            }
+        }
+    }
+
+}
